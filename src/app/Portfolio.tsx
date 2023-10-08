@@ -35,7 +35,6 @@ export default function Home() {
         <Navbar data={data} />
         <Hero data={data} />
         <About data={data} />
-        <Skills />
         <Projects />
       </div>
     </main>

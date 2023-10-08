@@ -15,30 +15,37 @@ export default function Projects() {
             <div className="project__container--title">
               <h3>{project.name}</h3>
             </div>
-            <div className="project__container--image">
-              <Image
-                src={project.projectImg ? project.projectImg : ''}
-                alt={project.name}
-                width={350}
-                height={300}
-              />
-            </div>
-            <div className="project__container--description">
-              <p>{project.description}</p>
-            </div>
-            <div className="project__container--bullets">
-              <ul>
-                {project.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="project__container--tech">
-              <p>
-                {project.techStack.map((tech) => (
-                  <span key={tech}>{tech}</span>
-                ))}
-              </p>
+            <div className="project__container--content">
+              <div className="project__container--image">
+                <Image
+                  src={project.projectImg ? project.projectImg : ''}
+                  alt={project.name}
+                  width={350}
+                  height={300}
+                />
+              </div>
+              <div className="project__container--info">
+                <div className="project__container--description">
+                  <h4>{project.description}</h4>
+                </div>
+                <div className="project__container--bullets">
+                  <ul>
+                    {project.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="project__container--tech">
+                  <p>
+                    Environment:{' '}
+                    {project.techStack.map((tech, i) => (
+                      <span key={tech}>
+                        {tech} {i < project.techStack.length - 1 && '|'}{' '}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="project__container--links">
               <Link href={project.githubLink ? project.githubLink : ''}>

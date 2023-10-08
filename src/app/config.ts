@@ -40,7 +40,7 @@ export const projects: Project[] = [
     {
         id: 2,
         name: "Social Media API",
-        description: "A CookSys team project to create a RESTful API for a social media platform",
+        description: "A RESTful API for a social media platform",
         bullets: [
             "Implemented a RESTful Web Service with 30 endpoints for full CRUD functionality for Tweets, Users, Tags, Mentions, and Followers using Java and the Spring framework",
             "Developed a database schema from an ERD supported by PostgreSQL in pgAdmin",
