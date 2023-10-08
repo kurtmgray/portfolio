@@ -5,38 +5,28 @@ export default function Skills() {
   return (
     <div className="skills" id="skills">
       <div className="skills__container">
-        <h2 className="skills__title">My Skills</h2>
+        <h3 className="skills__title">My Skill Areas</h3>
         <div className="skills__area">
-          {skillAreas.map((area: String, index) => (
-            <div key={index} className="skills__area--container">
-              <div className="skills__area--list">
-                <div key={index} className="skills__area--item">
-                  {area}
-                </div>
-              </div>
-            </div>
-          ))}
-          <div className="skills__area">
-            <h3 className="skills__frontend">Front End</h3>
-            {frontendSkills.map((area: String, index) => (
-              <div key={index} className="skills__area--container">
-                <div className="skills__area--list">
-                  <div key={index} className="skills__area--item">
-                    {area}
-                  </div>
-                </div>
+          <div className="skills__area--container">
+            {skillAreas.map((area: String, index) => (
+              <div key={index} className="skills__area">
+                {area}
               </div>
             ))}
           </div>
-          <div className="skills__area">
-            <h3 className="skills__backend">Back End</h3>
+          <div className="skills__list--frontend">
+            <h4 className="skills__title">Front End</h4>
+            {frontendSkills.map((area: String, index) => (
+              <div key={index} className="skills__item-frontend">
+                {area}
+              </div>
+            ))}
+          </div>
+          <div className="skills__list--backend">
+            <h4 className="skills__title">Back End</h4>
             {backendSkills.map((area, index) => (
-              <div key={index} className="skills__area--container">
-                <div className="skills__area--list">
-                  <div key={index} className="skills__area--item">
-                    {area}
-                  </div>
-                </div>
+              <div key={index} className="skills__item-backend">
+                {area}
               </div>
             ))}
           </div>

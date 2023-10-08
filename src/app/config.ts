@@ -12,11 +12,11 @@ export const frontendSkills = [
 ]
 
 export const backendSkills = [
-    "Node", "Express", "Java", "Spring Boot", "No-SQL", "SQL"
+    "Node", "Express", "Java", "Spring Boot", "No-SQL", "SQL", "JWT", "OAuth2"
 ]
 
 export const skillAreas = [
-    "Front End", "Full Stack", "Back End"
+    "Front End", "Full Stack", "Back End", "REST API Development", "Database Management"   
 ]
 
 export const projects: Project[] = [
@@ -43,10 +43,9 @@ export const projects: Project[] = [
         description: "A RESTful API for a social media platform",
         bullets: [
             "Implemented a RESTful Web Service with 30 endpoints for full CRUD functionality for Tweets, Users, Tags, Mentions, and Followers using Java and the Spring framework",
-            "Developed a database schema from an ERD supported by PostgreSQL in pgAdmin",
             "Utilized Spring Boot and JPA to implement endpoints that handle HTTP requests, backend logic, and converts data between API requests and its database models",
             "Optimized, tested, and troubleshot database operations in Postman, minimizing server overhead, enhancing the application’s efficiency and responsiveness",
-            "Collaborated in an agile team setting, utilizing Git for version control, ensuring a robust and scalable product delivery on schedule"
+            "Collaborated in an agile team setting powered by Git,  ensuring a robust and scalable product delivery on schedule"
         ],
         techStack: ["Java", "Spring Boot", "JPA", "PostgreSQL", "pgAdmin", "Git", "IntelliJ", "Maven"],
         deployedLink: null,
@@ -56,23 +55,6 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        name: "Beat Boss",
-        description: "A programmable metronome app for musical practice applications",
-        bullets: [
-            "Using the Web Audio API and Tone.js library, implemented a metronome for standard and programmable time-keeping functions", 
-            "Implemented an effective state management system using React Hooks to meet the complex needs of interacting with real-time audio", 
-            "Metronome features multiple sound libraries with 35 customizable sounds for beat subdivision with individual and master gain controls. Implemented visual component synced with audio",
-            "Programmable mode features user–customizable segments of tempo, time signature, iteration count, sounds, and gain levels. These programs are serialized to JSON for local storage and sharing",
-            "Modeled after the widely used “Dr. Beat” electronic metronome, with improved programming capabilities and user interface. Features in progress include program sharing, tempo transitions, and a ‘cut-time’ mode for advancing ensembles",
-        ],
-        techStack: ["React", "Web Audio API", "Tone.js"],
-        deployedLink: null,
-        githubLink: "https://github.com/kurtmgray/metronome-react",
-        githubLink2: null,
-        projectImg: metBasic
-    },
-    {
-        id: 4,
         name: "Pantry",
         description: "A full-stack recipe and pantry management app (in development)",
         bullets: [
@@ -85,6 +67,23 @@ export const projects: Project[] = [
         githubLink: "https://github.com/kurtmgray/pantry",
         githubLink2: null,
         projectImg: pantryHome
+    },
+    {
+        id: 4,
+        name: "Beat Boss",
+        description: "A programmable metronome app for musical practice applications",
+        bullets: [
+            "A metronome for standard and programmable time-keeping functions, using Web Audio API and Tone.js", 
+            "Implements React Hooks to meet the complex needs of interacting with real-time audio", 
+            "Features include sound libraries, per-subdivision and master gain controls, visual component synced with audio",
+            "Programmable mode features user–customizable segments of tempo, time signature, iteration count, sounds, and gain levels",
+            "Modeled after the widely used “Dr. Beat” electronic metronome, with improved programming capabilities and UI",
+        ],
+        techStack: ["React", "Web Audio API", "Tone.js"],
+        deployedLink: null,
+        githubLink: "https://github.com/kurtmgray/metronome-react",
+        githubLink2: null,
+        projectImg: metBasic
     },
 
 ]

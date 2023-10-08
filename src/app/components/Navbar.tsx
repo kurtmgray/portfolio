@@ -12,7 +12,7 @@ type NavbarProps = {
 
 export default function Navbar({ data }: NavbarProps) {
   return (
-    <header className="" id="home">
+    <header className="header" id="home">
       <Link href="/">
         <div className="header__id">
           <Image
@@ -26,23 +26,17 @@ export default function Navbar({ data }: NavbarProps) {
         </div>
       </Link>
       <div className="header__links">
-        <Link href="#home">
-          <button className="">Home</button>
-        </Link>
-        <Link href="#about-me">
-          <button className="">About Me</button>
-        </Link>
-        <Link href="#projects">
-          <button className="">Projects</button>
-        </Link>
+        <Link href="#home">Home</Link>
+        <Link href="#about-me">About Me</Link>
+        <Link href="#projects">Projects</Link>
         {/* <a>
             <button className="">Contact Form</button>
           </a> */}
-        <Link className="header__icons" href="https://github.com/kurtmgray">
+        <Link className="header__icon" href="https://github.com/kurtmgray">
           <GitHubIcon />
         </Link>
         <Link
-          className="header__icons"
+          className="header__icon"
           href="https://www.linkedin.com/in/kurtmgray"
         >
           <LinkedInIcon />

@@ -4,6 +4,7 @@ import { projects } from '../config';
 import { Project } from '../../../types';
 import Link from 'next/link';
 import GithubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 export default function Projects() {
   return (
@@ -49,21 +50,21 @@ export default function Projects() {
             </div>
             <div className="project__container--links">
               <Link href={project.githubLink ? project.githubLink : ''}>
-                <button className="project__container--links--github">
-                  <GithubIcon /> {project.id === 1 ? 'Frontend' : 'Github'}
+                <button>
+                  <GithubIcon /> {project.id === 1 ? ' Frontend' : ' Github'}
                 </button>
               </Link>
               {project.githubLink2 && (
                 <Link href={project.githubLink2}>
-                  <button className="project__container--links--github">
-                    <GithubIcon /> {project.id === 1 ? 'API' : 'Github'}
+                  <button>
+                    <GithubIcon /> {project.id === 1 ? ' API' : ' Github'}
                   </button>
                 </Link>
               )}
               {project.deployedLink && (
                 <Link href={project.deployedLink ? project.deployedLink : ''}>
-                  <button className="project__container--links--live">
-                    Live
+                  <button>
+                    <LaunchIcon /> Live
                   </button>
                 </Link>
               )}
