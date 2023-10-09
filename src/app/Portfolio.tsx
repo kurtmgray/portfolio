@@ -34,7 +34,7 @@ export default function Home() {
       <div id="root">
         <Navbar data={data} />
         <Hero data={data} />
-        <About data={data} />
+        <About />
         <Projects />
       </div>
     </main>
