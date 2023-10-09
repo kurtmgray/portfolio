@@ -34,7 +34,7 @@ export const projects: Project[] = [
         ],
         deployedLink: "https://blog.kurtgray.dev",
         githubLink: "https://github.com/kurtmgray/blog-react",
-        githubLink2: "https://github.com/kurtmgray/blog-react",
+        githubLink2: "https://github.com/kurtmgray/blog-api",
         projectImg: blogHome
     },
     {
