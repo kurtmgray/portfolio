@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { GitHubResponse } from '../../types';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
-import { GitHubResponse } from '../../types';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function Home() {
   const [data, setData] = useState<GitHubResponse>({
@@ -38,6 +38,7 @@ export default function Home() {
         <About />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </main>
   );

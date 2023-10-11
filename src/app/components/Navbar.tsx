@@ -38,13 +38,15 @@ export default function Navbar({ data }: NavbarProps) {
         <Link href="#contact" className="header__link">
           Contact
         </Link>
-        {/* <a>
-            <button className="">Contact Form</button>
-          </a> */}
-        <Link className="header__icon" href="https://github.com/kurtmgray">
+        <Link
+          target="_blank"
+          className="header__icon"
+          href="https://github.com/kurtmgray"
+        >
           <GitHubIcon />
         </Link>
         <Link
+          target="_blank"
           className="header__icon"
           href="https://www.linkedin.com/in/kurtmgray"
         >

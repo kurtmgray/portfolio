@@ -49,20 +49,28 @@ export default function Projects() {
               </div>
             </div>
             <div className="project__container--links">
-              <Link href={project.githubLink ? project.githubLink : ''}>
-                <button>
-                  <GithubIcon /> {project.id === 1 ? ' Frontend' : ' Github'}
-                </button>
-              </Link>
+              {project.githubLink && (
+                <Link
+                  target="_blank"
+                  href={project.githubLink ? project.githubLink : ''}
+                >
+                  <button>
+                    <GithubIcon /> {project.id === 1 ? ' Frontend' : ' Github'}
+                  </button>
+                </Link>
+              )}
               {project.githubLink2 && (
-                <Link href={project.githubLink2}>
+                <Link target="_blank" href={project.githubLink2}>
                   <button>
                     <GithubIcon /> {project.id === 1 ? ' API' : ' Github'}
                   </button>
                 </Link>
               )}
               {project.deployedLink && (
-                <Link href={project.deployedLink ? project.deployedLink : ''}>
+                <Link
+                  target="_blank"
+                  href={project.deployedLink ? project.deployedLink : ''}
+                >
                   <button>
                     <LaunchIcon /> Live
                   </button>

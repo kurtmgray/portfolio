@@ -28,6 +28,7 @@ export default function Hero({ data }: HeroProps) {
         <div className="hero__resume--link">
           <Link
             className=""
+            target="_blank"
             href="https://drive.google.com/file/d/1D5bS937KMQKoDIEs2Eq4AfoAwjcfyHq4/view?usp=sharing"
           >
             <button>
@@ -40,7 +41,7 @@ export default function Hero({ data }: HeroProps) {
           <button className="">Link to contact form</button>
         </a> */}
           <Link className="" href="https://github.com/kurtmgray">
-            <GitHubIcon />
+            <GitHubIcon color="primary" />
           </Link>
           <Link className="" href="https://www.linkedin.com/in/kurtmgray/">
             <LinkedInIcon />
