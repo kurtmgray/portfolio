@@ -1,6 +1,4 @@
 import React, { useState, FormEvent } from 'react';
-// import sendEmail from '../../api/sendgrid';
-
 export default function Contact() {
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
@@ -20,26 +18,33 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let isValidForm = handleValidation();
-    // if (isValidForm) {
-    //   const { success, error } = await sendEmail({
-    //     email,
-    //     fullname,
-    //     subject,
-    //     message,
-    //   });
+    if (isValidForm) {
+      const res = await fetch('/api/sendgrid', {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          subject: subject,
+          message: message,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      });
 
-    //   if (!success) {
-    //     console.log(error);
-    //     setShowSuccessMessage(false);
-    //     setShowFailureMessage(true);
-    //     setButtonText('Send');
-    //     return;
-    //   }
-    //   setShowSuccessMessage(true);
-    //   setShowFailureMessage(false);
-    //   setButtonText('Send');
-    // }
-    // console.log(fullname, email, subject, message);
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText('Send');
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText('Send');
+    }
+    console.log(fullname, email, subject, message);
   };
 
   const handleValidation = () => {

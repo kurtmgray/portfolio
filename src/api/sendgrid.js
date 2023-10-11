@@ -1,15 +1,13 @@
 import sendgrid from "@sendgrid/mail";
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
-// async function sendEmail(req, res) {
-  async function sendEmail({ fullname, email, subject, message }) {
-  console.log(process.env.SENDGRID_API_KEY);
+async function sendEmail(req, res) {
   try {
     await sendgrid.send({
       to: "kurtgray@@gmail.com",
-      from: "kurtgray@gmail.com",
-      subject: `[Lead from website] : ${subject}`,
+      from: `${req.body.email}`,
+      subject: `[Lead from website] : ${req.body.subject}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
         <head>
@@ -28,20 +26,21 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
             <div class="img-container" style="display: flex;justify-content: center;align-items: center;border-radius: 5px;overflow: hidden; font-family: 'helvetica', 'ui-sans';">              
                 </div>
                     <div class="container" style="margin-left: 20px;margin-right: 20px;">
-                        <h3>You've got a new mail from ${fullname}, their email is: ✉️${req.body.email} </h3>
+                        <h3>You've got a new mail from ${req.body.fullname}, their email is: ✉️${req.body.email} </h3>
                         <div style="font-size: 16px;">
                             <p>Message:</p>
-                            <p>${message}</p>
+                            <p>${req.body.message}</p>
                             <br>
                         </div>
                 </div>
         </body>
       </html>`,
     });
-    return {success: true}
   } catch (error) {
-    return { error: error.message };
+    return res.status(error.statusCode || 500).json({ error: error.message });
   }
+
+  return res.status(200).json({ error: "" });
 }
 
 export default sendEmail;
