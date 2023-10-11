@@ -7,6 +7,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import { GitHubResponse } from '../../types';
+import Contact from './components/Contact';
 
 export default function Home() {
   const [data, setData] = useState<GitHubResponse>({
@@ -36,6 +37,7 @@ export default function Home() {
         <Hero data={data} />
         <About />
         <Projects />
+        <Contact />
       </div>
     </main>
   );

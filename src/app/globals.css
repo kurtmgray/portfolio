@@ -59,6 +59,7 @@ h1, h2, h3 {
 h1 {
   font-size: 2.5em;
   font-weight: 800;
+  
 }
 
 h2 {
@@ -104,6 +105,7 @@ img {
   width: 100%;
   padding: 20px;
   border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
 }
 
 .header__id {
@@ -191,7 +193,7 @@ img {
 .skills__container {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
@@ -211,20 +213,16 @@ img {
   flex-wrap: wrap; 
 }
 
-.skills__area--container .skills__area {
+.skills__area--container {
   display: inline-block;
-  background-color: #0070f3;
-  color: #ffffff;
-  border-radius: 20px;
   padding: 5px 15px;
   margin-right: 10px;
   margin-bottom: 16px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.skills__item-frontend, .skills__item-backend {
+.skills__item-frontend, 
+.skills__item-backend, 
+.skills__area-item {
   display: inline-block;
   background-color: #0070f3;
   color: #ffffff;
@@ -234,7 +232,15 @@ img {
   margin-bottom: 5px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skills__item-frontend:hover, 
+.skills__item-backend:hover,
+.skills__area-item:hover {
+  transform: translate(-1px, -3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
 }
 
 .skills__list--frontend, .skills__list--backend {
@@ -303,6 +309,72 @@ img {
   gap: 10px;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 20px 0 60px 0;
+}
+
+.contact__title {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 800;
+}
+
+.contact label {
+  font-size: 1em;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-weight: semi-bold;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  font-family: 'OpenSans', sans-serif;
+}
+
+.contact textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact button {
+  align-self: center;
+  gap: 8px;
+}
+
+.contact div {
+  margin-top: 10px;
+}
+
+.contact p {
+  color: green;
+  font-weight: semi-bold;
+}
+
+.contact span {
+  color: red;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -316,11 +388,16 @@ img {
 
   .header__links a {
     margin: 0 2px;
+    text-align: center;
   }
   
   .project__container, .project__container--content {
     flex-direction: column;
     padding: 10px 0
+  }
+
+  .contact {
+    width: 90%;
   }
 }
 

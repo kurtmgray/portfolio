@@ -9,7 +9,7 @@ export default function Skills() {
         <div className="skills__area">
           <div className="skills__area--container">
             {skillAreas.map((area: String, index) => (
-              <div key={index} className="skills__area">
+              <div key={index} className="skills__area-item">
                 {area}
               </div>
             ))}

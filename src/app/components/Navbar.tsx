@@ -26,9 +26,18 @@ export default function Navbar({ data }: NavbarProps) {
         </div>
       </Link>
       <div className="header__links">
-        <Link href="#home">Home</Link>
-        <Link href="#about-me">About Me</Link>
-        <Link href="#projects">Projects</Link>
+        <Link href="#home" className="header__link">
+          Home
+        </Link>
+        <Link href="#about-me" className="header__link">
+          About
+        </Link>
+        <Link href="#projects" className="header__link">
+          Projects
+        </Link>
+        <Link href="#contact" className="header__link">
+          Contact
+        </Link>
         {/* <a>
             <button className="">Contact Form</button>
           </a> */}
