@@ -40,8 +40,11 @@ export default function Projects() {
                   <p>
                     Environment:{' '}
                     {project.techStack.map((tech, i) => (
-                      <span key={tech}>
-                        {tech} {i < project.techStack.length - 1 && '|'}{' '}
+                      <span key={tech} className="tech-stack__item">
+                        {tech}{' '}
+                        {i < project.techStack.length - 1 && (
+                          <span className="separator">|</span>
+                        )}{' '}
                       </span>
                     ))}
                   </p>

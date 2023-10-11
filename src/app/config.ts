@@ -49,7 +49,7 @@ export const projects: Project[] = [
         ],
         techStack: ["Java", "Spring Boot", "JPA", "PostgreSQL", "pgAdmin", "Git", "IntelliJ", "Maven"],
         deployedLink: null,
-        githubLink: null,
+        githubLink: "https://github.com/kurtmgray/twitter-api",
         githubLink2: null,
         projectImg: twitterApi
     },

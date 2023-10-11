@@ -309,6 +309,14 @@ img {
   gap: 10px;
 }
 
+.tech-stack__item {
+  font-style: italic;
+}
+
+.separator {
+  font-style: normal;
+}
+
 .contact {
   display: flex;
   flex-direction: column;

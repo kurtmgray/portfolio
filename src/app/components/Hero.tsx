@@ -44,7 +44,7 @@ export default function Hero({ data }: HeroProps) {
             <GitHubIcon color="primary" />
           </Link>
           <Link className="" href="https://www.linkedin.com/in/kurtmgray/">
-            <LinkedInIcon />
+            <LinkedInIcon color="primary" />
           </Link>
         </div>
       </div>
