@@ -9,7 +9,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 export default function Projects() {
   return (
     <div className="projects" id="projects">
-      <h2>Projects</h2>
+      <h2 className="project__title">Projects</h2>
       {projects.map((project: Project) => (
         <div className="project" key={project.id}>
           <div className="project__container">

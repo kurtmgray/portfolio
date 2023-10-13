@@ -83,7 +83,7 @@ export default function Contact() {
     <form className="contact" id="contact" onSubmit={handleSubmit}>
       <h1 className="contact__title">Send a message</h1>
 
-      <label htmlFor="fullname" className="">
+      <label htmlFor="fullname">
         Full name <span className="">*</span>
       </label>
       <input
@@ -96,7 +96,7 @@ export default function Contact() {
         }}
       />
 
-      <label htmlFor="email" className="">
+      <label htmlFor="email">
         E-mail<span className="">*</span>
       </label>
       <input
@@ -109,7 +109,7 @@ export default function Contact() {
         }}
       />
 
-      <label htmlFor="subject" className="">
+      <label htmlFor="subject">
         Subject<span className="">*</span>
       </label>
       <input
@@ -122,7 +122,7 @@ export default function Contact() {
         }}
       />
 
-      <label htmlFor="message" className="">
+      <label htmlFor="message">
         Message<span className="">*</span>
       </label>
       <textarea
@@ -133,8 +133,8 @@ export default function Contact() {
           setMessage(e.target.value);
         }}
       ></textarea>
-      <div className="">
-        <button className="">
+      <div>
+        <button>
           {buttonText}
           <svg
             width="24"
