@@ -5,7 +5,7 @@ import twitterApi from '../../static/media/twitter-api.png'
 
 import { Project } from '../../types'
 
-export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code with development driven by SOLID principles. My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, curriculum developer, composer, visual designer, and team leader in the education space. As a software developer I have taken those skills into full-stack development, integrating powerful and relevant technologies in the Javascript and Java ecosystems. I graduated from the FastTrack Full-Stack Developer program, completed The Odin Project web developer curriculum, and hold bachelors and masters degrees from leading universities."
+export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code. My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, curriculum developer, composer, visual designer, and team leader in the music education space. As a software developer I have taken those skills into full-stack development, integrating powerful and relevant technologies in the Javascript and Java ecosystems. I graduated from the FastTrack Full-Stack Developer program, completed The Odin Project web developer curriculum, and hold bachelors and masters degrees from leading universities."
 
 export const frontendSkills = [
     "Javascript", "TypeScript", "React", "Next", "Angular", "HTML", "CSS"

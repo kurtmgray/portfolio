@@ -416,11 +416,11 @@ img {
 }
 
 @keyframes colorChange {
-  0%   { background: rgba(210, 180, 140, 0.6); } /* Tan with 60% opacity */
-  25%  { background: rgba(144, 238, 144, 0.6); } /* LightGreen with 60% opacity */
-  50%  { background: rgba(173, 216, 230, 0.6); } /* LightBlue with 60% opacity */
-  75%  { background: rgba(221, 160, 221, 0.6); } /* Plum with 60% opacity */
-  100% { background: rgba(210, 180, 140, 0.6); } /* Tan with 60% opacity */
+  0%   { background: rgba(210, 180, 140, 0.6); } 
+  25%  { background: rgba(144, 238, 144, 0.6); } 
+  50%  { background: rgba(173, 216, 230, 0.6); } 
+  75%  { background: rgba(221, 160, 221, 0.6); } 
+  100% { background: rgba(210, 180, 140, 0.6); } 
 }
 
 
