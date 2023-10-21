@@ -2,6 +2,7 @@ import blogHome from '../../static/media/blog-home.png'
 import pantryHome from '../../static/media/pantry-home.png'
 import metBasic from '../../static/media/met-basic.png'
 import twitterApi from '../../static/media/twitter-api.png'
+import spotify from '../../static/media/whos-who.png'
 
 import { Project } from '../../types'
 
@@ -70,6 +71,22 @@ export const projects: Project[] = [
     },
     {
         id: 4,
+        name: "Who’s Who?",
+        description: "A musical guessing game utilizing the Spotify API",
+        bullets: [
+            "Created an intuitive, user-friendly game where players test their music knowledge through dynamically created questions and answers",
+            "Increased user engagement by integrating user input to create a custom gaming experience, adapting questions based on players’ preferences",
+            "Ensured efficient use of resources and minimized costs by optimizing Spotify Web API calls to reduce unnecessary requests",
+            "Leveraged Angular best practices to ensure a smooth and scalable game platform through collaboration in a cross-functional team"
+],
+        techStack: ["TypeScript", "Angular", "HTML", "CSS", "Spotify Web API"],
+        deployedLink: null,
+        githubLink: null,
+        githubLink2: null,
+        projectImg: spotify
+    },
+    {
+        id: 5,
         name: "Beat Boss",
         description: "A programmable metronome app for musical practice applications",
         bullets: [

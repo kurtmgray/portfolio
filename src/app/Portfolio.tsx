@@ -37,7 +37,7 @@ export default function Home() {
         <Hero data={data} />
         <About />
         <Projects />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </div>
     </main>
