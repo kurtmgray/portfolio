@@ -30,7 +30,7 @@ export default function Hero({ data }: HeroProps) {
           <Link
             className=""
             target="_blank"
-            href="https://drive.google.com/file/d/1D5bS937KMQKoDIEs2Eq4AfoAwjcfyHq4/view?usp=sharing"
+            href="https://drive.google.com/file/d/1D5bS937KMQKoDIEs2Eq4AfoAwjcfyHq4/view?usp=drive_link"
           >
             <button>
               <DownloadIcon /> Resume

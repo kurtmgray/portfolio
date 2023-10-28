@@ -3,6 +3,7 @@ import pantryHome from '../../static/media/pantry-home.png'
 import metBasic from '../../static/media/met-basic.png'
 import twitterApi from '../../static/media/twitter-api.png'
 import spotify from '../../static/media/whos-who.png'
+import cook from '../../static/media/cook-fs-pm.png'
 
 import { Project } from '../../types'
 
@@ -40,6 +41,23 @@ export const projects: Project[] = [
     },
     {
         id: 2,
+        name: "Cook Sys Project Board",
+        description: "A Full Stack Project Management App",
+        bullets: [
+            "Enhanced user experience through leading a team through the creation and design of a dynamic project management dashboard",
+            "Ensured cohesive data flow by integrating a robust data model with Angular Services singleton",
+            "Achieved seamless backend integration by clarifying, refining, synchronizing API endpoints with the backend team",
+            "DDelivered timely and tested feature releases by operating in sprint cycles alongside a diverse team using Git"
+        ],
+        techStack: ["TypeScript", "Angular", "Java", "Spring Boot", "PostgreSQL",],
+        deployedLink: null,
+        githubLink: "https://github.com/kurtmgray/project-board",
+        githubLink2: null,
+        projectImg: cook
+    },
+    
+    {
+        id: 3,
         name: "Social Media API",
         description: "A RESTful API for a social media platform",
         bullets: [
@@ -55,7 +73,7 @@ export const projects: Project[] = [
         projectImg: twitterApi
     },
     {
-        id: 3,
+        id: 4,
         name: "Pantry",
         description: "A full-stack recipe and pantry management app (in development)",
         bullets: [
@@ -70,7 +88,7 @@ export const projects: Project[] = [
         projectImg: pantryHome
     },
     {
-        id: 4,
+        id: 5,
         name: "Who’s Who?",
         description: "A musical guessing game utilizing the Spotify API",
         bullets: [
@@ -81,12 +99,12 @@ export const projects: Project[] = [
 ],
         techStack: ["TypeScript", "Angular", "HTML", "CSS", "Spotify Web API"],
         deployedLink: null,
-        githubLink: null,
+        githubLink: 'https://github.com/kurtmgray/whos-who.git',
         githubLink2: null,
         projectImg: spotify
     },
     {
-        id: 5,
+        id: 6,
         name: "Beat Boss",
         description: "A programmable metronome app for musical practice applications",
         bullets: [
