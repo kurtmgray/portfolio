@@ -440,10 +440,25 @@ img {
     font-size: 30px;
   }
   
+  .projects {
+    padding: 10px;
+  }
+
+  .project {
+    width: 100%;
+  }
+
   .project__container, .project__container--content {
     flex-direction: column;
-    padding: 10px 0
+    padding: 10px 5px;
+    margin: 0px;
   }
+
+  .project__container--image img {
+    max-width: 100%;
+    height: auto;
+ }
+ 
 
   .contact {
     width: 90%;
