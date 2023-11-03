@@ -16,3 +16,8 @@ export type Project = {
     githubLink2: string | null,
     projectImg: StaticImageData | string | null
 }
+
+ type Message = {
+    text: string;
+    sender: string;
+  };
