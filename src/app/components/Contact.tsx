@@ -34,7 +34,7 @@ export default function Contact() {
 
       const { error } = await res.json();
       if (error) {
-        console.log(error);
+        console.log('error: ', error);
         setShowSuccessMessage(false);
         setShowFailureMessage(true);
         setButtonText('Send');
@@ -75,7 +75,7 @@ export default function Contact() {
     }
 
     setErrors({ ...tempErrors });
-    console.log('errors', errors);
+    // console.log('errors', errors);
     return isValid;
   };
 
