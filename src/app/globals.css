@@ -404,6 +404,14 @@ img {
   color: red;
 }
 
+.buttonMessage {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: 10px;
+  font-size: small;
+}
+
 .footer {
   display: flex;
   justify-content: center;

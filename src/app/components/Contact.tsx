@@ -14,37 +14,47 @@ export default function Contact() {
   const [buttonText, setButtonText] = useState('Send');
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
+  const [showValidationMessage, setShowValidationMessage] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setShowValidationMessage(false);
     let isValidForm = handleValidation();
-    if (isValidForm) {
-      const res = await fetch('/api/sendgrid', {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log('error: ', error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText('Send');
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText('Send');
+    if (!isValidForm) {
+      setShowValidationMessage(true);
+      return;
     }
-    console.log(fullname, email, subject, message);
+    const res = await fetch('/api/sendgrid', {
+      body: JSON.stringify({
+        email: email,
+        fullname: fullname,
+        subject: subject,
+        message: message,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      console.log('error: ', error);
+      setShowSuccessMessage(false);
+      setShowFailureMessage(true);
+      setButtonText('Send');
+      return;
+    }
+    setShowSuccessMessage(true);
+    setShowFailureMessage(false);
+    setFullname('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+    setButtonText('Send');
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 5000);
   };
 
   const handleValidation = () => {
@@ -75,7 +85,6 @@ export default function Contact() {
     }
 
     setErrors({ ...tempErrors });
-    // console.log('errors', errors);
     return isValid;
   };
 
@@ -133,7 +142,14 @@ export default function Contact() {
           setMessage(e.target.value);
         }}
       ></textarea>
-      <div>
+      <div className="buttonMessage">
+        {showSuccessMessage && <p className="">Message sent!</p>}
+        {showFailureMessage && (
+          <p className="">Message failed to send. Please try again.</p>
+        )}
+        {showValidationMessage && (
+          <p className="">Please fill out all required fields.</p>
+        )}
         <button>
           {buttonText}
           <svg
@@ -151,16 +167,6 @@ export default function Contact() {
           </svg>
         </button>
       </div>
-      {showSuccessMessage && (
-        <div className="">
-          <p className="">Message sent!</p>
-        </div>
-      )}
-      {showFailureMessage && (
-        <div className="">
-          <p className="">Message failed to send. Please try again.</p>
-        </div>
-      )}
     </form>
   );
 }

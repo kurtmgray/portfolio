@@ -21,7 +21,6 @@ export default function Home() {
       try {
         const res = await fetch(gitApiUrl);
         const data: GitHubResponse = await res.json();
-        console.log(data);
         setData(data);
       } catch (err) {
         console.log(err);
