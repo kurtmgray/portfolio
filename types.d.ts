@@ -17,6 +17,17 @@ export type Project = {
     projectImg: StaticImageData | string | null
 }
 
+export type WorkExperience = {
+    id: number,
+    role: string,
+    company: string,
+    companyImg: StaticImageData | string | null,
+    description:string,
+    time: string,
+    techStack: string[],
+    bullets: string[],
+}
+
  type Message = {
     text: string;
     sender: string;

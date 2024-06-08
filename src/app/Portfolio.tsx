@@ -5,9 +5,11 @@ import { GitHubResponse } from '../../types';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { gitApiUrl } from './config';
 
 export default function Home() {
   const [data, setData] = useState<GitHubResponse>({
@@ -16,7 +18,6 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const gitApiUrl = 'https://api.github.com/users/kurtmgray';
     const getData = async () => {
       try {
         const res = await fetch(gitApiUrl);
@@ -35,6 +36,7 @@ export default function Home() {
         <Navbar data={data} />
         <Hero data={data} />
         <About />
+        <Experience />
         <Projects />
         <Contact />
         <Footer />

@@ -4,10 +4,20 @@ import metBasic from '../../static/media/met-basic.png'
 import twitterApi from '../../static/media/twitter-api.png'
 import spotify from '../../static/media/whos-who.png'
 import cook from '../../static/media/cook-fs-pm.png'
+import fxg from '../../static/media/fxg.svg'
 
-import { Project } from '../../types'
+import { Project, WorkExperience } from '../../types'
 
-export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code. My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, curriculum developer, composer, visual designer, and team leader in the music education space. As a software developer I have taken those skills into full-stack development, integrating powerful and relevant technologies in the Javascript and Java ecosystems. I graduated from the FastTrack Full-Stack Developer program, completed The Odin Project web developer curriculum, and hold bachelors and masters degrees from leading universities."
+export const gitApiUrl = 'https://api.github.com/users/kurtmgray';
+
+export const resumePdf = "https://drive.google.com/file/d/1RIdhcxpyTFfetji4GN4sv8WkHc8E1Ugm/view?usp=share_link"
+
+export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code. " +
+    "My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, " + 
+    "curriculum developer, composer, visual designer, and thought leader in the music education space. As a software developer I have " + 
+    "taken those skills into full-stack development, integrating powerful and relevant technologies in the Javascript and Java ecosystems. " + 
+    "I graduated from the FastTrack Full-Stack Developer program, completed The Odin Project web developer curriculum, and hold bachelors and " + 
+    "masters degrees from leading universities."
 
 export const frontendSkills = [
     "Javascript", "TypeScript", "React", "Next", "Angular", "HTML", "CSS"
@@ -18,7 +28,7 @@ export const backendSkills = [
 ]
 
 export const skillAreas = [
-    "Front End", "Full Stack", "Back End", "REST API Development", "Database Management"   
+    "Front End", "Full Stack", "Back End", "CI/CD", "API Development"
 ]
 
 export const projects: Project[] = [
@@ -120,5 +130,38 @@ export const projects: Project[] = [
         githubLink2: null,
         projectImg: metBasic
     },
+]
 
+export const experiences: WorkExperience[] = [
+    {
+        id: 1,
+        role: "Full Stack Developer",
+        company: "FedEx Ground International",
+        description: "International Open Systems & Legacy Applications",
+        time: "November 2023 - present",
+        techStack: ["Java", "Spring Boot", "Angular", "TypeScript", "Jenkins", "Oracle", "iBMI"],
+        bullets: [
+            "Developed and configured business-critical applications for production deployment while transitioning from SOAP to REST API architecture",
+            "Employed TDD and conducted thorough integration testing to ensure seamless production integration",
+            "Collaborated with architects and business experts to address and resolve architectural issues",
+            "Created developer tools to enhance workflow efficiency across multiple teams",
+            "Delivered high-quality work in various settings, including full-team collaboration, pair programming, and independent projects, within an Agile team environment"
+        ],
+        companyImg: fxg
+    },
+    {
+        id: 2,
+        role: "Instrumental Music Director",
+        company: "Moorpark Unified School District",
+        description: "Comprehensive Secondary Schoools Music Programs",
+        time: "July 2005 - November 2023",
+        techStack: [],
+        bullets: [
+            "Improved student achievement and retention through implementation of original curriculum and instructional materials",
+            "Increased district funding for students and staff development for music and arts programs while advising on District Arts Council",
+            "Enhanced educational outcomes by guiding and assessing specialist teaching staff, leading to improved instruction quality and student achievement",
+            "Optimized a $50,000 annual budget to achieve measurable student outcomes and community impact"
+        ],
+        companyImg: fxg
+    }
 ]

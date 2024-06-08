@@ -302,6 +302,7 @@ img {
 
 .project__container--content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 12px;  
 }

@@ -7,6 +7,7 @@ import { GitHubResponse } from '../../../types';
 import placeholder from './../../../static/media/placeholder-pfp.webp';
 import Link from 'next/link';
 import Particles from './Particles';
+import { resumePdf } from '../config';
 
 type HeroProps = {
   data: GitHubResponse;
@@ -27,11 +28,7 @@ export default function Hero({ data }: HeroProps) {
       <div className="hero__info">
         <p className="hero__bio">{data.bio}</p>
         <div className="hero__resume--link">
-          <Link
-            className=""
-            target="_blank"
-            href="https://drive.google.com/file/d/1D5bS937KMQKoDIEs2Eq4AfoAwjcfyHq4/view?usp=drive_link"
-          >
+          <Link className="" target="_blank" href={resumePdf}>
             <button>
               <DownloadIcon /> Resume
             </button>
