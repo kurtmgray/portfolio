@@ -6,33 +6,33 @@ import Link from 'next/link';
 
 export default function Experience() {
   return (
-    <div className="projects" id="projects">
-      <h2 className="project__title">Work Experience</h2>
+    <div className="experiences" id="experiences">
+      <h2 className="experience__title">Work Experience</h2>
       {experiences.map((job: WorkExperience) => (
-        <div className="project" key={job.id}>
-          <div className="project__container">
-            <div className="project__container--title">
+        <div className="experience" key={job.id}>
+          <div className="experience__container">
+            <div className="experience__container--title">
               <h3>{job.role}</h3>
             </div>
-            <div className="project__container--content">
-              <div className="project__container--image">
+            <div className="experience__container--content">
+              <div className="experience__container--image">
                 <Image
-                  src={job.companyImg ? job.companyImg : ''}
+                  src={job.companyImg.img ? job.companyImg.img : ''}
                   alt={job.company}
-                  width={200}
-                  height={200}
+                  width={job.companyImg.width}
+                  height={job.companyImg.height}
                 />
               </div>
               <div>
                 <h3>{job.company}</h3>
               </div>
-              <div className="project__container--info">
-                <div className="project__container--description">
+              <div className="experience__container--info">
+                <div className="experience__container--description">
                   <p>
-                    {job.description}: {job.time}
+                    {job.description}: <span className="time">{job.time}</span>
                   </p>
                 </div>
-                <div className="project__container--bullets">
+                <div className="experience__container--bullets">
                   <ul>
                     {job.bullets.map((bullet) => (
                       <li key={bullet}>{bullet}</li>
@@ -40,7 +40,7 @@ export default function Experience() {
                   </ul>
                 </div>
                 {job.techStack.length > 0 && (
-                  <div className="project__container--tech">
+                  <div className="experience__container--tech">
                     <p>
                       Environment:{' '}
                       {job.techStack.map((tech, i) => (
@@ -56,28 +56,28 @@ export default function Experience() {
                 )}
               </div>
             </div>
-            {/* <div className="project__container--links">
+            {/* <div className="experience__container--links">
               {job.githubLink && (
                 <Link
                   target="_blank"
-                  href={project.githubLink ? project.githubLink : ''}
+                  href={experience.githubLink ? experience.githubLink : ''}
                 >
                   <button>
-                    <GithubIcon /> {project.id === 1 ? ' Frontend' : ' Github'}
+                    <GithubIcon /> {experience.id === 1 ? ' Frontend' : ' Github'}
                   </button>
                 </Link>
               )}
-              {project.githubLink2 && (
-                <Link target="_blank" href={project.githubLink2}>
+              {experience.githubLink2 && (
+                <Link target="_blank" href={experience.githubLink2}>
                   <button>
-                    <GithubIcon /> {project.id === 1 ? ' API' : ' Github'}
+                    <GithubIcon /> {experience.id === 1 ? ' API' : ' Github'}
                   </button>
                 </Link>
               )}
-              {project.deployedLink && (
+              {experience.deployedLink && (
                 <Link
                   target="_blank"
-                  href={project.deployedLink ? project.deployedLink : ''}
+                  href={experience.deployedLink ? experience.deployedLink : ''}
                 >
                   <button>
                     <LaunchIcon /> Live

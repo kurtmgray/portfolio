@@ -5,6 +5,7 @@ import twitterApi from '../../static/media/twitter-api.png'
 import spotify from '../../static/media/whos-who.png'
 import cook from '../../static/media/cook-fs-pm.png'
 import fxg from '../../static/media/fxg.svg'
+import mrpk from '../../static/media/mrpk.png'
 
 import { Project, WorkExperience } from '../../types'
 
@@ -147,7 +148,11 @@ export const experiences: WorkExperience[] = [
             "Created developer tools to enhance workflow efficiency across multiple teams",
             "Delivered high-quality work in various settings, including full-team collaboration, pair programming, and independent projects, within an Agile team environment"
         ],
-        companyImg: fxg
+        companyImg: {
+            img: fxg,
+            width: 200,
+            height: 90
+        }
     },
     {
         id: 2,
@@ -162,6 +167,10 @@ export const experiences: WorkExperience[] = [
             "Enhanced educational outcomes by guiding and assessing specialist teaching staff, leading to improved instruction quality and student achievement",
             "Optimized a $50,000 annual budget to achieve measurable student outcomes and community impact"
         ],
-        companyImg: fxg
+        companyImg: {
+            img: mrpk,
+            width: 150,
+            height: 150
+        }
     }
 ]

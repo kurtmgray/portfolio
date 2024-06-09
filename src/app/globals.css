@@ -149,7 +149,7 @@ img {
   align-items: center;
 }
 
-.hero, .about-me, .projects {
+.hero, .about-me, .projects, .experiences {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,25 +271,29 @@ img {
   background-color: #005bb5; 
 }
 
-.skills__area, .project__container {
+.time {
+  font-style: italic;
+}
+
+.skills__area, .project__container, .experience__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.projects {
+.projects, .experiences {
   padding: 30px;
   margin-bottom: 50px;
 }
 
-.project {
+.project,  .experience {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
   width: 90%
 }
 
-.project__container {
+.project__container, .experience__container {
   display: flex;
   align-items: center;  
   border: 1px solid #e0e0e0;
@@ -300,14 +304,20 @@ img {
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
 }
 
-.project__container--content {
+.experience__container--content {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 12px;  
 }
 
-.project__container--title {
+.project__container--content {
+  display: flex;
+  align-items: center;
+  margin: 12px; 
+}
+
+.project__container--title, .experience__container--title  {
   width: 80%; 
   background-color: #6b394e;
   border-radius: 5px;
@@ -316,21 +326,21 @@ img {
   text-align: center;
 }
 
-.project__container--title h3 {
+.project__container--title h3, .experience__container--title h3 {
   margin-bottom: 6px;
 }
 
-.project__container--info {
+.project__container--info, .experience__container--info  {
   display: flex;
   flex-direction: column;
   margin: 12px;  
 }
 
-.project__container--bullets {
+.project__container--bullets, .experience__container--bullets  {
   padding: 8px 0 8px 16px;
 }
 
-.project__container--links {
+.project__container--links, .experience__container  {
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -449,21 +459,22 @@ img {
     font-size: 30px;
   }
   
-  .projects {
+  .projects, .experiences {
     padding: 10px;
   }
 
-  .project {
+  .project, .experience {
     width: 100%;
   }
 
-  .project__container, .project__container--content {
+  .project__container, .project__container--content,
+  .experience__container, .experience__container--content {
     flex-direction: column;
     padding: 10px 5px;
     margin: 0px;
   }
 
-  .project__container--image img {
+  .project__container--image img, .experience__container--image img {
     max-width: 100%;
     height: auto;
  }

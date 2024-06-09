@@ -35,10 +35,18 @@ export default function Hero({ data }: HeroProps) {
           </Link>
         </div>
         <div className="hero__gh-li--links">
-          <Link className="" href="https://github.com/kurtmgray">
+          <Link
+            className=""
+            target="_blank"
+            href="https://github.com/kurtmgray"
+          >
             <GitHubIcon color="primary" />
           </Link>
-          <Link className="" href="https://www.linkedin.com/in/kurtmgray/">
+          <Link
+            className=""
+            target="_blank"
+            href="https://www.linkedin.com/in/kurtmgray/"
+          >
             <LinkedInIcon color="primary" />
           </Link>
           <Particles />

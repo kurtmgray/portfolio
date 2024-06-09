@@ -21,7 +21,11 @@ export type WorkExperience = {
     id: number,
     role: string,
     company: string,
-    companyImg: StaticImageData | string | null,
+    companyImg: {
+        img: StaticImageData | string | null,
+        width: number,
+        height: number
+    }
     description:string,
     time: string,
     techStack: string[],
