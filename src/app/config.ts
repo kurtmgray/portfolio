@@ -11,7 +11,7 @@ import { Project, WorkExperience } from '../../types'
 
 export const gitApiUrl = 'https://api.github.com/users/kurtmgray';
 
-export const resumePdf = "https://drive.google.com/file/d/1RIdhcxpyTFfetji4GN4sv8WkHc8E1Ugm/view?usp=share_link"
+export const resumePdf = "https://drive.google.com/file/d/19Ge2-wfuirBMrY1Iv-AmSCqYNq4w6_8t/view?usp=share_link"
 
 export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code. " +
     "My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, " + 
@@ -138,11 +138,11 @@ export const experiences: WorkExperience[] = [
         id: 1,
         role: "Full Stack Developer",
         company: "FedEx Ground International",
-        description: "International Open Systems & Legacy Applications",
+        description: "Surface International Border Process and System Team",
         time: "November 2023 - present",
-        techStack: ["Java", "Spring Boot", "Angular", "TypeScript", "Jenkins", "Oracle", "iBMI"],
+        techStack: ["Java", "Spring Boot", "Angular", "TypeScript", "Jenkins", "Oracle", "IBMi"],
         bullets: [
-            "Developed and configured business-critical applications for production deployment while transitioning from SOAP to REST API architecture",
+            "Defined work for team in a leadership role, enabling efficient work over sprints and larger program increments",
             "Employed TDD and conducted thorough integration testing to ensure seamless production integration",
             "Collaborated with architects and business experts to address and resolve architectural issues",
             "Created developer tools to enhance workflow efficiency across multiple teams",
