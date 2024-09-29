@@ -143,8 +143,8 @@ export const experiences: WorkExperience[] = [
         techStack: ["Java", "Spring Boot", "Angular", "TypeScript", "Jenkins", "Oracle", "IBMi"],
         bullets: [
             "Defined work for team in a leadership role, enabling efficient work over sprints and larger program increments",
-            "Employed TDD and conducted thorough integration testing to ensure seamless production integration",
-            "Collaborated with architects and business experts to address and resolve architectural issues",
+            "Developed effective end to end testing criteria and led its implementation on a major body of development work",
+            "Collaborated with architects and business experts to addresss and resolve architectural issues",
             "Created developer tools to enhance workflow efficiency across multiple teams",
             "Delivered high-quality work in various settings, including full-team collaboration, pair programming, and independent projects, within an Agile team environment"
         ],
