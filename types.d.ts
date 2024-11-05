@@ -25,7 +25,7 @@ export type WorkExperience = {
         img: StaticImageData | string | null,
         width: number,
         height: number
-    }
+    } | null
     description:string,
     time: string,
     techStack: string[],

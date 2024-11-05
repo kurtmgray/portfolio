@@ -11,7 +11,7 @@ import { Project, WorkExperience } from '../../types'
 
 export const gitApiUrl = 'https://api.github.com/users/kurtmgray';
 
-export const resumePdf = "https://drive.google.com/file/d/19Ge2-wfuirBMrY1Iv-AmSCqYNq4w6_8t/view?usp=share_link"
+export const resumePdf = "https://drive.google.com/file/d/1sXQ_UTB0PgtO1fFJ5bfVaSDvD612bSvV/view?usp=share_link"
 
 export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code. " +
     "My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, " + 
@@ -142,11 +142,12 @@ export const experiences: WorkExperience[] = [
         time: "November 2023 - present",
         techStack: ["Java", "Spring Boot", "Angular", "TypeScript", "Jenkins", "Oracle", "IBMi"],
         bullets: [
-            "Defined work for team in a leadership role, enabling efficient work over sprints and larger program increments",
-            "Developed effective end to end testing criteria and led its implementation on a major body of development work",
-            "Collaborated with architects and business experts to addresss and resolve architectural issues",
-            "Created developer tools to enhance workflow efficiency across multiple teams",
-            "Delivered high-quality work in various settings, including full-team collaboration, pair programming, and independent projects, within an Agile team environment"
+            "Delivered high-quality work in various settings, including full-team collaboration, pair programming, and independent projects, within an Agile team environment",
+            "Led a team of 6 developers to successfully meet project deadlines and team objectives while navigatinga 20% increase in workload across multiple sprints",
+            "Led end-to-end testing for a cross-ART initiative, delivering actionable feedback on data flow within the Surface Clearance system, resulting in a significant reduction in processing errors",
+            "Authored and refined Jenkins pipelines for automated deployment to PCF, improving deployment efficiency and reliability across production and development environments",
+            "Collaborated with architects and business experts to address and resolve architectural issues",
+            "Created developer tools to enhance workflow efficiency across multiple teams"
         ],
         companyImg: {
             img: fxg,
@@ -156,6 +157,21 @@ export const experiences: WorkExperience[] = [
     },
     {
         id: 2,
+        role: "Freelance Web Developer",
+        company: "Self Employed",
+        description: "Full-Stack and CRM Development",
+        time: "January 2022 - present",
+        techStack: ["Javascript", "TypeScript", "Node", "Express", "MongoDB", "WordPress"],
+        bullets: [
+            "Designed and implemented RESTful APIs, managed data schemas, and developed user-friendly interfaces to ensure seamless functionality across full-stack applications",
+            "Integrated secure auth protocols, including JWT and Google OAuth2, to facilitate user account creation and login",
+            "Optimized state management for complex interactions using React hooks, React Query, and Redux and enhanced user engagement by integrating personalized APIs",
+            "Built and currently maintain a local business WordPress site, managing updates to align with client needs"
+        ],
+        companyImg: null
+    },
+    {
+        id: 3,
         role: "Instrumental Music Director",
         company: "Moorpark Unified School District",
         description: "Comprehensive Secondary Schoools Music Programs",
