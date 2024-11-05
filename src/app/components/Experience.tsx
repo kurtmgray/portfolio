@@ -15,14 +15,16 @@ export default function Experience() {
               <h3>{job.role}</h3>
             </div>
             <div className="experience__container--content">
-              <div className="experience__container--image">
-                <Image
-                  src={job.companyImg.img ? job.companyImg.img : ''}
-                  alt={job.company}
-                  width={job.companyImg.width}
-                  height={job.companyImg.height}
-                />
-              </div>
+              {job.companyImg && (
+                <div className="experience__container--image">
+                  <Image
+                    src={job.companyImg.img ? job.companyImg.img : ''}
+                    alt={job.company}
+                    width={job.companyImg.width}
+                    height={job.companyImg.height}
+                  />
+                </div>
+              )}
               <div>
                 <h3>{job.company}</h3>
               </div>
