@@ -11,14 +11,12 @@ import { Project, WorkExperience } from '../../types'
 
 export const gitApiUrl = 'https://api.github.com/users/kurtmgray';
 
-export const resumePdf = "https://drive.google.com/file/d/1sXQ_UTB0PgtO1fFJ5bfVaSDvD612bSvV/view?usp=share_link"
+export const resumePdf = "https://drive.google.com/file/d/1sXQ_UTB0PgtO1fFJ5bfVaSDvD612bSvV/view?usp=sharing"
 
-export const aboutMe = "A skilled software developer focused on solving problems with clean, maintainable code. " +
-    "My passion for building mechanisms to creatively address real-world problems extends from my considerable experience as a teacher, " + 
-    "curriculum developer, composer, visual designer, and thought leader in the music education space. As a software developer I have " + 
-    "taken those skills into full-stack development, integrating powerful and relevant technologies in the Javascript and Java ecosystems. " + 
-    "I graduated from the FastTrack Full-Stack Developer program, completed The Odin Project web developer curriculum, and hold bachelors and " + 
-    "masters degrees from leading universities."
+export const aboutMe = "Transitioning into tech from a successful career in education, I bring a unique blend of technical and communication skills. " + 
+    "My background equips me with the ability to break down intricate problems, think creatively, and collaborate effectively across diverse teams. I " + 
+    "leverage my growth mindset to continually expand my expertise, from crafting RESTful APIs and scalable cloud-based services to delivering front-end " + 
+    "applications that delight users."
 
 export const frontendSkills = [
     "Javascript", "TypeScript", "React", "Next", "Angular", "HTML", "CSS"
