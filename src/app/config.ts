@@ -11,12 +11,18 @@ import { Project, WorkExperience } from '../../types'
 
 export const gitApiUrl = 'https://api.github.com/users/kurtmgray';
 
-export const resumePdf = "https://drive.google.com/file/d/1sXQ_UTB0PgtO1fFJ5bfVaSDvD612bSvV/view?usp=sharing"
+export const resumePdf = "https://drive.google.com/file/d/1xM7cs7uifo2gQUKyG-_4242eOpH6T9kP/view?usp=sharing"
 
-export const aboutMe = "Transitioning into tech from a successful career in education, I bring a unique blend of technical and communication skills. " + 
-    "My background equips me with the ability to break down intricate problems, think creatively, and collaborate effectively across diverse teams. I " + 
-    "leverage my growth mindset to continually expand my expertise, from crafting RESTful APIs and scalable cloud-based services to delivering front-end " + 
-    "applications that delight users."
+export const aboutMe = "Technology professional and highly adaptable leader with experience in all aspects of the Software Development Life " +
+    "Cycle, focused on business outcomes and clear communication."
+
+export const baseBullets = [
+    "3+ years of front-end development experience, building applications using JavaScript, React, HTML, and CSS, with a strong focus on user experience",
+    "2+ years of back-end development experience, developing scalable and performant backend APIs and designing efficient data persistence layers with Java, Spring, Node, SQL and relational databases",
+    "Strong organizational and communication skills, enabling efficient multitasking and prioritization in cross-functional environments",
+    "Proficient in implementing CI/CD pipelines and deploying cloud-based applications, optimizing development work-flows and ensuring scalable, reliable systems",
+    "Ownership mindset, proactively identifying and resolving challenges while fostering a collaborative environment"
+]
 
 export const frontendSkills = [
     "Javascript", "TypeScript", "React", "Next", "Angular", "HTML", "CSS"

@@ -202,6 +202,11 @@ img {
 
 }
 
+.about-me__bullets {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
 .skills {
   display: flex;
   justify-content: space-between;
