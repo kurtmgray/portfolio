@@ -1,0 +1,36 @@
+{
+  "family": "kurtmgray-portfolio-task",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::919488177132:role/ecsTaskExecutionRole",
+  "cpu": "512",
+  "memory": "1024",
+  "requiresCompatibilities": ["FARGATE"],
+  "containerDefinitions": [
+    {
+      "name": "kurtmgray-portfolio",
+      "image": "919488177132.dkr.ecr.us-east-1.amazonaws.com/kurtmgray-portfolio:latest",
+      "memory": 512,
+      "cpu": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "NEXT_PUBLIC_DIALOGFLOW_TOKEN",
+          "value": ""
+        }
+      ],
+      "secrets": [
+        {
+          "name": "NEXT_PUBLIC_SENDGRID_API_KEY",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:919488177132:secret:PortfolioSecrets"
+        }
+      ]
+    }
+  ]
+}

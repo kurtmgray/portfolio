@@ -2,7 +2,6 @@ import React from 'react';
 import { experiences } from '../config';
 import { WorkExperience } from '../../../types';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Experience() {
   return (

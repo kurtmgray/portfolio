@@ -6,12 +6,13 @@ import spotify from '../../static/media/whos-who.png'
 import cook from '../../static/media/cook-fs-pm.png'
 import fxg from '../../static/media/fxg.svg'
 import mrpk from '../../static/media/mrpk.png'
+import isg from '../../static/media/isg-logo.png'
 
 import { Project, WorkExperience } from '../../types'
 
 export const gitApiUrl = 'https://api.github.com/users/kurtmgray';
 
-export const resumePdf = "https://drive.google.com/file/d/1xM7cs7uifo2gQUKyG-_4242eOpH6T9kP/view?usp=sharing"
+export const resumePdf = "https://drive.google.com/file/d/1ju5RV4NP_zs4qNCMxmcdJrAnc9xXEcH0/view?usp=sharing"
 
 export const aboutMe = "Technology professional and highly adaptable leader with experience in all aspects of the Software Development Life " +
     "Cycle, focused on business outcomes and clear communication."
@@ -49,7 +50,7 @@ export const projects: Project[] = [
         ],
         techStack: ["JavaScript", "React", "React Query", "Node.js", "Express.js", "MongoDB"
         ],
-        deployedLink: "https://blog.kurtgray.dev",
+        deployedLink: "https://morning-meadow-95658.herokuapp.com",
         githubLink: "https://github.com/kurtmgray/blog-react",
         githubLink2: "https://github.com/kurtmgray/blog-api",
         projectImg: blogHome
@@ -138,12 +139,33 @@ export const projects: Project[] = [
 ]
 
 export const experiences: WorkExperience[] = [
+      {
+        id: 0,
+        role: "Full Stack Developer",
+        company: "ISG Value",
+        description: "Clinical Services Development Team",
+        time: "March 2025 - present",
+        techStack: ["JavaScript", "TypeScript", "React", "tRPC", "MS SQL", "Bitbucket"],
+        bullets: [
+            "Led end-to-end development of an audit and annotation history system for claims and related documents, designing event type/category models, UI components, and the developer API to standardize and automate tracking across workflows",
+            "Partnered with business stakeholders to gather requirements and reconcile inconsistent legacy processes, enabling a unified event structure that eliminates redundancy and improves clarity",
+            "Built full-stack features in a TypeScript monorepo using React, tRPC, and MS SQL, delivering scalable components and services that integrate with multiple workflows and client portals",
+            "Developed admin functionality to assign user roles and implemented a “preferred” doctor designation feature, enhancing search prioritization and improving usability for internal teams",
+            "Collaborated with architects and business experts to address and resolve architectural issues",
+            "Collaborated with QA and business teams in iterative testing cycles, rapidly addressing feedback to align functionality with sometimes rapidly changing user expectations"
+        ],
+        companyImg: {
+            img: isg,
+            width: 200,
+            height: 150
+        }
+    },
     {
         id: 1,
         role: "Full Stack Developer",
         company: "FedEx Ground International",
         description: "Surface International Border Process and System Team",
-        time: "November 2023 - present",
+        time: "November 2023 - March 2025",
         techStack: ["Java", "Spring Boot", "Angular", "TypeScript", "Jenkins", "Oracle", "IBMi"],
         bullets: [
             "Delivered high-quality work in various settings, including full-team collaboration, pair programming, and independent projects, within an Agile team environment",
